@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+:root
+{
+    --clr-color1:  #7d2ae8;
+    --clr-color2:  #f3f5f8;
+    --cl1-color3: #1ABC9C;
+}
+*
+{
+    margin:0;
+    padding:0;
+    font-family: 'Pt Sans Narrow';
+    box-sizing: border-box;
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr-color2);
+}
+.container
+{
+    padding: 50px;
+    border-radius: 25px;
+    border: 8px solid var(--clr-color2);
+    box-shadow: 
+    -5px -5px 15px rgba(255, 255, 255, 0.084), 
+     5px 5px 15px rgba(0, 0, 0, 0.103), 
+     inset -5px -5px 15px rgba(255, 255, 255, 0.105), 
+     inset 5px 5px 15px rgba(0, 0, 0, 0.092);
+}
+
+.container .form.signin,
+.container.signinForm .form.member
+{
+    display:none;
+}
+.container.signinForm .form.signin
+{
+    display:flex;
+}
+
+.container .form
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+}
+.container .form h2
+{
+    color:#666;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.container .form .inputBox
+{
+    position: relative;
+    width: 300px;
+}
+.container .form .inputBox input
+{
+     width: 100%;
+     outline:none;
+     border:none;
+     background: var(--clr-color2);
+     border:1px solid rgba(0,0,0,0.1);
+     border-radius: 25px;
+     color:#222;
+     font-weight: 500;
+     padding: 12px 10px 12px 48px;
+     font-size: 0.9em;
+     letter-spacing: 0.05em;
+     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.151),
+     5px 5px 15px rgba(0,0,0,0.1);
+     transition: 0.4s;
+}
+.container .form .inputBox span
+{
+   left:0;
+   padding: 12px 10px 12px 48px;
+   position:absolute;
+   font-size: 0.9em;
+   letter-spacing: 0.05em;
+   pointer-events: none;
+   transition: 0.5s;
+   color:#222;
+}
+.container .form .inputBox input:valid ~ span,
+.container .form .inputBox input:focus ~ span
+{
+    color:var(--clr-color1);
+    font-size: 0.8em;
+    transform: translateX(25px) translateY(-7px);
+    padding: 0 8px;
+    border: 1px solid var(--clr-color1);
+    border-radius: 25px;
+    background: var(--clr-color2);
+}
+.container .form .inputBox i
+{
+    left:16px;
+    position:absolute;
+    top:15px;
+    width: 25px;
+    border-right: 1.5px solid var(--clr-color1);
+    color: var(--clr-color1);
+    padding-right: 8px;
+    padding: 2px 0;
+    transition: 0.5s;
+}
+.container .form .inputBox input:valid,
+.container .form .inputBox input:focus
+{
+    border: 1px solid var(--clr-color1);
+}
+
+.container .form .inputBox input[type="submit"]
+{
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 125px;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    color:#fff;
+    background: linear-gradient(-45deg , #1ABC9C , #7d2ae8, #7d2ae8 , #1ABC9C);
+    transition-duration:  0.3s;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property:box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.container .form .inputBox input[type="submit"]:hover,
+.container .form .inputBox input[type="submit"]:focus,
+.container .form .inputBox input[type="submit"]:active
+{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.160);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+
+.container .form p
+{
+    font-size: 0.85em;
+    font-weight: 500;
+    color:#333;
+    letter-spacing: 0.05em;
+}
+.container .form  p a
+{
+    text-decoration: none;
+    color:#444;
+}
+.container .form p a:hover 
+{
+    text-decoration: underline;
+}
+
+.container .form .social-links
+{
+    position:absolute;
+    padding-left: 20px;
+}
+.container .form .text
+{
+    padding-top: 40px;
+}
+.social-links
+{
+    display:flex;
+    
+}
+.social-links a
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color:#444;
+    margin-bottom: 350px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.082);
+    position:relative;
+    text-align: center;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.social-links a .fab
+{
+    position:relative;
+    line-height: 45px;
+    font-size: 22px;
+    z-index: 10;
+    transition: color 0.8s linear;
+
+}
+.social-links a::after
+{
+    content:'';
+    position:absolute;
+    left:0;
+    top:-90px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, var(--clr-color1) , var(--cl1-color3));
+    transition: 0.5s;
+}
+.social-links a:hover::after
+{
+    top:0;
+}
+.social-links a:hover
+{
+    color:#fff;
+}

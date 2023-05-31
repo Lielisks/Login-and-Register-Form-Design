@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login and Register Form</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="form member">
+            <h2>Login</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-solid fa-user"></i>
+                <span>Username</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login">
+            </div>
+
+            <p>Forgot Password ? <a href="#" class="login">Register</a></p>
+        </div>
+
+        <div class="form signin">
+            <h2>Register Here</h2>
+
+            <div class="social-links">
+            <a href="https://www.facebook.com/" target="-blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/" target="-blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/" target="-blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="-blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="-blank"><i class="fab fa-instagram"></i></a>
+        </div>
+  
+            <p class="text"> or use your email for register </p>   
+
+            
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-solid fa-user"></i>
+                <span>First Name</span>
+            </div>
+
+            
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-solid fa-user"></i>
+                <span>Last Name</span>
+            </div>
+
+            
+            <div class="inputBox">
+                <input type="email" required="required">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email </span>
+            </div>
+
+            
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Create Password</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="submit" value="Sign in">
+            </div>
+
+            <p>Arent Register ? <a href="#" class=create>Login</a></p>
+
+
+        </div>
+    </div>
+
+    <script>
+        let login = document.querySelector(".login");
+        let create = document.querySelector(".create");
+        let container = document.querySelector(".container");
+
+        login.onclick = function ()
+        {
+            container.classList.add('signinForm');
+        }
+        create.onclick = function ()
+        {
+            container.classList.remove('signinForm');
+        }
+    </script>
+</body>
+</html>
